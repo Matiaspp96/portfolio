@@ -3,8 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+
 	body {
-		@apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+		@apply bg-[#ecf0f3] text-[#1f2937] tracking-wide selection:bg-[#516ce5]/50 selection:text-sky-800
+	}
+
+	body::-webkit-scrollbar{
+		width: 10px;
+		height: 20px;
+	}
+
+	body::-webkit-scrollbar-thumb{
+		background: #245a7e;
+		border-radius: 100vh;
+	}
+
+	body::-webkit-scrollbar-track{
+		border-radius: 100vh;
+		background: #ecf0f3;
+	}
+
+	body::-webkit-scrollbar-thumb:hover{
+		background: #709dff;
 	}
 
 	h1,h2,h3,h4,h5,h6{
@@ -24,6 +44,6 @@
 	}
 
 	button{
-		@apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+		@apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#516ce5] to-[#709dff] text-white 
 	}
 }
