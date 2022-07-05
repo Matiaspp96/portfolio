@@ -4,6 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import getInTouch from '../../public/assets/Get in touch.jpg';
 
 const Contact = () => {
 	return (
@@ -18,11 +19,7 @@ const Contact = () => {
 					<div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
 						<div className='lg:p-4 h-full rounded-xl'>
 							<div className='rounded-xl hover:scale-105 ease-in duration-300 overflow-hidden'>
-								<Image
-									src='/../public/assets/Get in touch.jpg'
-									width={500}
-									height={380}
-								/>
+								<Image src={getInTouch} width={500} height={380} />
 							</div>
 							<div>
 								<h2 className='py-2'>Matias</h2>
@@ -36,7 +33,7 @@ const Contact = () => {
 								<p className='uppercase pt-8'>Connect with me</p>
 								<div className='flex items-center justify-evenly py-4'>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
-										<FaLinkedinIn/>
+										<FaLinkedinIn />
 									</div>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
 										<FaGithub />
@@ -104,7 +101,10 @@ const Contact = () => {
 					<Link href='/'>
 						<a>
 							<div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-								<HiOutlineChevronDoubleUp className='text-[#516ce5]' size={30}/>
+								<HiOutlineChevronDoubleUp
+									className='text-[#516ce5]'
+									size={30}
+								/>
 							</div>
 						</a>
 					</Link>

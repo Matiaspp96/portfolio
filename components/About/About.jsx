@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Me from '../../public/assets/Matias.jpg';
 
 const About = () => {
 	return (
@@ -39,7 +40,13 @@ const About = () => {
 				</div>
 				<div className='w-auto h-auto m-auto border-2 border-[#516ce5] shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-1 hover:border-sky-300 hover:scale-105 ease-in duration-300'>
 					{/* Image className='rounded-xl' */}
-					<Image className="rounded-xl" src='/../public/assets/Matias.jpg' alt='Matias Picture' width={300} height={500} />
+					<Image
+						className='rounded-xl'
+						src={Me}
+						alt='Matias Picture'
+						width={300}
+						height={500}
+					/>
 				</div>
 			</div>
 		</div>

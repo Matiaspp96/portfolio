@@ -10,6 +10,7 @@ import {
 	SiPassport,
 	SiRedux,
 } from 'react-icons/si';
+import PetElegant from '../public/assets/Render Pet Elegant.png';
 
 const ecommerce = () => {
 	return (
@@ -18,7 +19,7 @@ const ecommerce = () => {
 				<div className='flex flex-col items-center w-full bg-black/5 rounded-xl py-4 '>
 					<Image
 						className='opacity-80 transform hover:opacity-100 transition ease-in duration-200'
-						src='/../public/assets/Render Pet Elegant.png'
+						src={PetElegant}
 						width={750}
 						height={400}
 						alt='/'

@@ -1,5 +1,5 @@
-import PetElegant from '../../public/assets/Render Pet Elegant.png'
-import Dogs from '../../public/assets/Render Project Dog.png'
+import PetElegant from '../../public/assets/Render Pet Elegant.png';
+import Dogs from '../../public/assets/Render Project Dog.png';
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -11,8 +11,18 @@ const Projects = () => {
 				</p>
 				<h2 className='text-center py-4'>What I&apos;ve Built</h2>
 				<div className='grid md:grid-cols-2 gap-8'>
-					<ProjectItem title='Pet Elegant' backgroundImg={PetElegant} url='/ecommerce' subtitle='Next.js E-commerce' />
-					<ProjectItem title='Dogs App' backgroundImg={Dogs} url='/dogs' subtitle='React App' />
+					<ProjectItem
+						title='Pet Elegant'
+						backgroundImg={PetElegant}
+						url='/ecommerce'
+						subtitle='Next.js E-commerce'
+					/>
+					<ProjectItem
+						title='Dogs App'
+						backgroundImg={Dogs}
+						url='/dogs'
+						subtitle='React App'
+					/>
 				</div>
 			</div>
 		</div>
