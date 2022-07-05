@@ -65,8 +65,8 @@ const dogs = () => {
 					</div>
 					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
 						<div className='p-2'>
-							<div className='grid grid-cols-3 md:grid-cols-1'>
 								<p className='text-center font-bold pb-2'>Technologies</p>
+							<div className='grid grid-cols-3 md:grid-cols-1'>
 								<p className='text-gray-600 py-2 flex items-center'>
 									<IoLogoJavascript className='mr-2' /> JavaScript{' '}
 								</p>
