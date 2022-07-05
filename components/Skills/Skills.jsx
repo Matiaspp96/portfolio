@@ -10,7 +10,7 @@ const Skills = () => {
 				{/* <h2 className='py-4'>I have experience whit these technologies</h2> */}
 				<h2 className='py-4'>What I Can Do</h2>
 				<div className='grid grid-cols-4 gap-5 grid-auto md:gap-14'>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[pulse_1s_ease-in-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg'
 							alt='The logo icon for react'
@@ -19,7 +19,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[spin_5s_ease-out]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg'
 							alt='The logo icon for nextjs'
@@ -37,7 +37,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[bounce_1s_ease-out]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
 							alt='The logo icon for redux'
@@ -46,7 +46,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[lightSpeedL_2s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg'
 							alt='The logo icon for html5'
@@ -55,7 +55,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[ping_1s_ease-out]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg'
 							alt='The logo icon for css'
@@ -64,7 +64,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[wiggle_1s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg'
 							alt='The logo icon for tailwindcss'
@@ -73,7 +73,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='animate-[fadeUp_1s_ease-out] hover:animate-[movement_2s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
 							alt='The logo icon for figma'
@@ -84,7 +84,7 @@ const Skills = () => {
 					</div>
 					{/* </div>
 				<div className='grid grid-cols-4 mt-5 px-5 gap-5 grid-auto md:gap-16'> */}
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[roll_2s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg'
 							alt='The logo icon for git'
@@ -102,7 +102,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[movement_2s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg'
 							alt='The logo icon for express'
@@ -111,7 +111,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[lightSpeed_2s_ease-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg'
 							alt='The logo icon for postgresql'
@@ -120,7 +120,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[pulse_1s_ease-in-out_infinite]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg'
 							alt='The logo icon for mongodb'
@@ -138,7 +138,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[spin_5s_ease-out]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg'
 							alt='The logo icon for heroku'
@@ -147,7 +147,7 @@ const Skills = () => {
 							height={150}
 						/>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div className='hover:animate-[ping_1s_ease-out]'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
 							alt='The logo icon for github'

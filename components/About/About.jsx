@@ -41,7 +41,7 @@ const About = () => {
 				<div className='w-auto h-auto m-auto border-2 border-[#516ce5] shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-1 hover:border-sky-300 hover:scale-105 ease-in duration-300'>
 					{/* Image className='rounded-xl' */}
 					<Image
-						className='rounded-xl'
+						className='rounded-xl animate-[flipX_2s_ease-out_infinite]'
 						src={Me}
 						alt='Matias Picture'
 						width={300}
