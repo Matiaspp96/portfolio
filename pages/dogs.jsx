@@ -8,7 +8,8 @@ import {
 import { SiExpress, SiPostgresql, SiRedux } from 'react-icons/si';
 import Dogs from '../public/assets/Render Project Dog.png';
 
-const dogs = () => {
+const dogs = (props) => {
+	const {projects} = props
 	return (
 		<div className='w-full'>
 			<div className='w-full h-full pt-20 relative flex flex-col items-center'>
@@ -29,21 +30,10 @@ const dogs = () => {
 				</div>
 				<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
 					<div className='col-span-4'>
-						<h2 className='py-2'>Overview</h2>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Perspiciatis ipsam enim odio nostrum provident beatae eveniet
-							ipsum sequi, quibusdam facilis minima illo illum voluptas corrupti
-							harum fugiat placeat sapiente unde, voluptate alias ullam vitae
-							aut! Beatae nam omnis esse animi saepe molestiae quisquam atque
-							ducimus repellendus, delectus fugiat dolore voluptatum maxime rem
-							laborum inventore odit modi molestias corporis. Aliquid dolorum
-							exercitationem amet temporibus magni excepturi. Qui ad repudiandae
-							ab aliquid expedita, voluptas temporibus animi adipisci sapiente
-							commodi velit aperiam nostrum debitis consequatur unde?
-							Accusantium, molestias repellendus, quaerat modi et, ad ut quo
-							explicabo iusto nihil enim vitae unde nemo dolore?
-						</p>
+						<h2 className='py-2'>{projects.overview}</h2>
+						<p className='py-2'>{projects.dogs1}</p>
+						<p className='py-2'>{projects.dogs2}</p>
+						<p className='py-2'>{projects.dogs3}</p>
 						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300'>
 							<a
 								href='https://project-dog.vercel.app/'
@@ -65,7 +55,7 @@ const dogs = () => {
 					</div>
 					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
 						<div className='p-2'>
-								<p className='text-center font-bold pb-2'>Technologies</p>
+								<p className='text-center font-bold pb-2'>{projects.technologies}</p>
 							<div className='grid grid-cols-3 md:grid-cols-1'>
 								<p className='text-gray-600 py-2 flex items-center'>
 									<IoLogoJavascript className='mr-2' /> JavaScript{' '}
@@ -98,3 +88,13 @@ const dogs = () => {
 };
 
 export default dogs;
+
+export async function getStaticProps({ locale }) {
+	const response = await import(`../lang/${locale}.json`)
+
+	return {
+		props: {
+			projects: response.projects,
+		}
+	}
+}

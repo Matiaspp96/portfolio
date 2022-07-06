@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../../public/assets/Logo-removebg-preview.png';
+import { useRouter } from 'next/router';
 
 const NavBar = () => {
 	const [nav, setNav] = useState(false);
 	const [scroll, setScroll] = useState(0);
 	const [navHidden, setNavHidden] = useState(false);
+	const router = useRouter();
 
 	const handleNav = () => {
 		setNav(!nav);
@@ -24,6 +25,12 @@ const NavBar = () => {
 			}
 			setScroll(window.scrollY);
 		}
+	};
+
+	const changeLanguage = e => {
+		router.push(router.pathname, router.pathname, {
+			locale: e.target.value,
+		});
 	};
 
 	useEffect(() => {
@@ -56,7 +63,7 @@ const NavBar = () => {
 					/>
 				</Link>
 				<div>
-					<ul className='hidden md:flex'>
+					<ul className='hidden md:flex items-center'>
 						<Link href='/'>
 							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
 								Home
@@ -82,6 +89,18 @@ const NavBar = () => {
 								Contact
 							</li>
 						</Link>
+						<select
+							onChange={changeLanguage}
+							className='ml-10 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none'
+							name='language'
+							id=''
+						>
+							<option selected defaultValue=''>
+								Language
+							</option>
+							<option value='es'>ES</option>
+							<option value='en'>EN</option>
+						</select>
 					</ul>
 					<div onClick={handleNav} className='md:hidden cursor-pointer'>
 						<AiOutlineMenu size={25} />
@@ -153,23 +172,59 @@ const NavBar = () => {
 									Contact
 								</li>
 							</Link>
+							<select
+								onChange={changeLanguage}
+								className='mt-2 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none'
+								name='language'
+								id=''
+							>
+								<option selected defaultValue=''>
+									Language
+								</option>
+								<option value='es'>ES</option>
+								<option value='en'>EN</option>
+							</select>
 						</ul>
-						<div className='pt-40'>
+						<div className='pt-32'>
 							<p className='uppercase tracking-widest text-[#516ce5]'>
 								Let&apos;s connect
 							</p>
 							<div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
 								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-									<FaLinkedinIn />
+									<a
+										href='https://www.linkedin.com/in/matias-palomo/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<FaLinkedinIn />
+									</a>
 								</div>
 								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-									<FaGithub />
+									<a
+										href='https://github.com/Matiaspp96/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<FaGithub />
+									</a>
 								</div>
 								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-									<AiOutlineMail />
+									<a
+										href='mailto:matiaas.p@gmail.com'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<AiOutlineMail />
+									</a>
 								</div>
 								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-									<BsFillPersonLinesFill />
+									<a
+										href='https://wa.link/sqc4wz'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<AiOutlineWhatsApp />
+									</a>
 								</div>
 							</div>
 						</div>

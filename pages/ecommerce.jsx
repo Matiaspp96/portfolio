@@ -12,7 +12,8 @@ import {
 } from 'react-icons/si';
 import PetElegant from '../public/assets/Render Pet Elegant.png';
 
-const ecommerce = () => {
+const ecommerce = (props) => {
+	const {projects} = props
 	return (
 		<div className='w-full'>
 			<div className='w-full h-full pt-20 relative flex flex-col items-center'>
@@ -31,22 +32,17 @@ const ecommerce = () => {
 						<h3>Next.js | Express | MongoDb</h3>
 					</div>
 				</div>
-				<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
+				<div className='max-w-[1240px] mx-5 p-2 grid md:grid-cols-5 gap-8 pt-8'>
 					<div className='col-span-4'>
-						<h2>Overview</h2>
+						<h2>{projects.overview}</h2>
 						<p className='py-2'>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Perspiciatis ipsam enim odio nostrum provident beatae eveniet
-							ipsum sequi, quibusdam facilis minima illo illum voluptas corrupti
-							harum fugiat placeat sapiente unde, voluptate alias ullam vitae
-							aut! Beatae nam omnis esse animi saepe molestiae quisquam atque
-							ducimus repellendus, delectus fugiat dolore voluptatum maxime rem
-							laborum inventore odit modi molestias corporis. Aliquid dolorum
-							exercitationem amet temporibus magni excepturi. Qui ad repudiandae
-							ab aliquid expedita, voluptas temporibus animi adipisci sapiente
-							commodi velit aperiam nostrum debitis consequatur unde?
-							Accusantium, molestias repellendus, quaerat modi et, ad ut quo
-							explicabo iusto nihil enim vitae unde nemo dolore?
+							{projects.ecommerce1}
+						</p>
+						<p className='py-2'>
+							{projects.ecommerce2}
+						</p>
+						<p className='py-2'>
+							{projects.ecommerce3}
 						</p>
 						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300'>
 							<a
@@ -69,7 +65,7 @@ const ecommerce = () => {
 					</div>
 					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
 						<div className='p-2'>
-							<p className='text-center font-bold pb-2'>Technologies</p>
+							<p className='text-center font-bold pb-2'>{projects.technologies}</p>
 							<div className='grid grid-cols-3 md:grid-cols-1'>
 								<p className='text-gray-600 py-2 flex items-center'>
 									<IoLogoJavascript className='mr-2' /> JavaScript{' '}
@@ -114,3 +110,13 @@ const ecommerce = () => {
 };
 
 export default ecommerce;
+
+export async function getStaticProps({ locale }) {
+	const response = await import(`../lang/${locale}.json`)
+
+	return {
+		props: {
+			projects: response.projects,
+		}
+	}
+}

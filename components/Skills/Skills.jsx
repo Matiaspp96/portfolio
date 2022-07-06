@@ -1,14 +1,16 @@
 import Image from 'next/image';
 
-const Skills = () => {
+const Skills = (props) => {
+	const { skills } = props
+
 	return (
 		<div id='skills' className='w-full md:h-full px-2 pt-24'>
 			<div className='max-w-[1240px] bg-[#ecf0f3] flex flex-col mx-auto text-center items-center'>
 				<p className='uppercase text-xl tracking-widest text-[#516ce5]'>
-					Skills
+					{skills.title}
 				</p>
 				{/* <h2 className='py-4'>I have experience whit these technologies</h2> */}
-				<h2 className='py-4'>What I Can Do</h2>
+				<h2 className='py-4'>{skills.subtitle}</h2>
 				<div className='grid grid-cols-4 gap-5 grid-auto md:gap-14'>
 					<div className='hover:animate-[pulse_1s_ease-in-out_infinite]'>
 						<Image

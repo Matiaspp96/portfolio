@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import getInTouch from '../../public/assets/Get in touch.jpg';
 
-const Contact = () => {
+const Contact = props => {
+	const { contact } = props;
 	return (
 		<div id='contact' className='w-full lg:h-screen'>
 			<div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
 				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>
-					Contact
+					{contact.title}
 				</p>
-				<h2 className='text-center py-4'>Get In Touch</h2>
+				<h2 className='text-center py-4'>{contact.subtitle}</h2>
 				<div className='grid lg:grid-cols-5 gap-8'>
 					{/* letf */}
 					<div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
@@ -24,25 +24,46 @@ const Contact = () => {
 							<div>
 								<h2 className='py-2'>Matias</h2>
 								<p>Front-End Developer</p>
-								<p className='py-4'>
-									I am available for freelance or full-time positions. Contact
-									me and let&apos;s talk.
-								</p>
+								<p className='py-4'>{contact.description}</p>
 							</div>
 							<div>
-								<p className='uppercase pt-8'>Connect with me</p>
+								<p className='uppercase pt-8'>{contact.connect}</p>
 								<div className='flex items-center justify-evenly py-4'>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
-										<FaLinkedinIn />
+										<a
+											href='https://www.linkedin.com/in/matias-palomo/'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<FaLinkedinIn />
+										</a>
 									</div>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
-										<FaGithub />
+										<a
+											href='https://github.com/Matiaspp96/'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<FaGithub />
+										</a>
 									</div>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
-										<AiOutlineMail />
+										<a
+											href='mailto:matiaas.p@gmail.com'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<AiOutlineMail />
+										</a>
 									</div>
 									<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-[#516ce5] hover:text-[#ecf0f3]'>
-										<BsFillPersonLinesFill />
+										<a
+											href='https://wa.link/sqc4wz'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<AiOutlineWhatsApp />
+										</a>
 									</div>
 								</div>
 							</div>
@@ -50,10 +71,17 @@ const Contact = () => {
 					</div>
 					<div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
 						<div className='p-4'>
-							<form action=''>
+							<form
+								action='mailto:matiaas.p@gmail.com'
+								method='POST'
+								encType='multipart/form-data'
+								name='EmailForm'
+							>
 								<div className='grid md:grid-cols-2 gap-4 w-full py-2'>
 									<div className='flex flex-col'>
-										<label className='uppercase text-sm py-2'>Name</label>
+										<label className='uppercase text-sm py-2'>
+											{contact.name}
+										</label>
 										<input
 											type='text'
 											className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
@@ -61,7 +89,7 @@ const Contact = () => {
 									</div>
 									<div className='flex flex-col'>
 										<label className='uppercase text-sm py-2'>
-											Phone Number
+											{contact.phone}
 										</label>
 										<input
 											type='text'
@@ -77,21 +105,28 @@ const Contact = () => {
 									/>
 								</div>
 								<div className='flex flex-col py-2'>
-									<label className='uppercase text-sm py-2'>Subject</label>
+									<label className='uppercase text-sm py-2'>
+										{contact.subject}
+									</label>
 									<input
 										type='email'
 										className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 									/>
 								</div>
 								<div className='flex flex-col py-2'>
-									<label className='uppercase text-sm py-2'>Message</label>
+									<label className='uppercase text-sm py-2'>
+										{contact.subject}
+									</label>
 									<textarea
 										className='border-2 rounded-lg p-3 border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 										rows='10'
 									></textarea>
 								</div>
-								<button className='w-full p-4 text-gray-200 mt-4 hover:scale-105 ease-in duration-300'>
-									Send Message
+								<button
+									type='submit'
+									className='shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#516ce5] to-[#709dff] w-full p-4 text-gray-200 mt-4 hover:scale-105 ease-in duration-300'
+								>
+									{contact.send}
 								</button>
 							</form>
 						</div>
