@@ -72,9 +72,7 @@ const Contact = props => {
 					<div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
 						<div className='p-4'>
 							<form
-								action='mailto:matiaas.p@gmail.com'
-								method='POST'
-								encType='multipart/form-data'
+								action="https://formsubmit.co/matiaas.p@gmail.com" method="POST"
 								name='EmailForm'
 							>
 								<div className='grid md:grid-cols-2 gap-4 w-full py-2'>
@@ -82,8 +80,11 @@ const Contact = props => {
 										<label className='uppercase text-sm py-2'>
 											{contact.name}
 										</label>
+										<input type="hidden" name="_next" value="https://matiasp.vercel.app/"></input>
 										<input
 											type='text'
+											name="name"
+											required
 											className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 										/>
 									</div>
@@ -93,6 +94,7 @@ const Contact = props => {
 										</label>
 										<input
 											type='text'
+											name='phone'
 											className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 										/>
 									</div>
@@ -101,6 +103,8 @@ const Contact = props => {
 									<label className='uppercase text-sm py-2'>Email</label>
 									<input
 										type='email'
+										name='email'
+										required
 										className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 									/>
 								</div>
@@ -110,12 +114,13 @@ const Contact = props => {
 									</label>
 									<input
 										type='text'
+										name='subject'
 										className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 									/>
 								</div>
 								<div className='flex flex-col py-2'>
 									<label className='uppercase text-sm py-2'>
-										{contact.subject}
+										{contact.message}
 									</label>
 									<textarea
 										className='border-2 rounded-lg p-3 border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
