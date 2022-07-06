@@ -109,7 +109,7 @@ const Contact = props => {
 										{contact.subject}
 									</label>
 									<input
-										type='email'
+										type='text'
 										className='border-2 rounded-lg p-3 flex border-[#516ce5]/50 focus:outline-none focus:border-[#516ce5] focus:ring-1'
 									/>
 								</div>
