@@ -6,6 +6,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				montserrat: ['Montserrat', 'sans-serif']
+			},
 			keyframes: {
 				wiggle: {
 					'0%, 100%': { transform: 'rotate(-3deg)' },

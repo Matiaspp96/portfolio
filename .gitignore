@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+/portfolio-next/node_modules

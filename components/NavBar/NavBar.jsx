@@ -49,7 +49,7 @@ const NavBar = () => {
 			className={
 				navHidden
 					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3]'
-					: 'fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3]'
+					: 'fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] hover:bg-gradient-to-bl from-[#f5f6ff] via-[#c5e9f7] to-[#889cf1]'
 			}
 		>
 			<div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
