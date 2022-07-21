@@ -4,7 +4,7 @@ import Me from '../../public/assets/Matias.jpg';
 const About = (props) => {
 	const { about } = props
 	return (
-		<div id='about' className='w-full md:h-screen p-2 flex items-center pt-12'>
+		<div id='about' className='w-full h-full lg:h-screen p-2 flex items-center pt-12'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
 				<div className='col-span-2'>
 					<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>

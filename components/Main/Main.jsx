@@ -6,15 +6,15 @@ const Main = props => {
 	const { main } = props;
 
 	return (
-		<div id='home' className='w-full h-screen text-center pt-12'>
+		<div id='home' className='w-full h-full lg:h-screen text-center pt-12'>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-				<div className='w-2/3 z-10'>
+				<div className='md:w-2/3 z-10'>
 					<p className='uppercase text-sm tracking-widest text-gray-400'>
 						{main.title}
 					</p>
 					<h1 className='py-4 text-gray-700'>
 						{main.salute}
-						<span className='font-extrabold text-transparent bg-clip-text bg-gradient-to-bl from-pink-400 via-[#7d51e5]  to-[#516ce5]'>Matias</span>
+						<span className='font-semibold text-transparent bg-clip-text bg-gradient-to-bl from-pink-400 via-[#7d51e5]  to-[#516ce5]'>Matias</span>
 					</h1>
 					<h1 className='py-4 text-gray-700 '>{main.subtitle}</h1>
 					<p className='py-4 text-gray-600 max-w-[70%] m-auto '>

@@ -1,7 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
+import {
+	AiOutlineMenu,
+	AiOutlineClose,
+	AiOutlineMail,
+	AiOutlineWhatsApp,
+} from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Logo from '../../public/assets/Logo-removebg-preview.png';
 import { useRouter } from 'next/router';
@@ -33,25 +38,69 @@ const NavBar = () => {
 		});
 	};
 
+	const navBar = useRef();
+
+	
 	useEffect(() => {
+		const button = document.getElementById('shiny')
+		
+		const { x, y } = navBar.current.getBoundingClientRect();
+
+		function moveMouse (e) {
+	
+			button.style.top = `${(e.clientY - y) - 130}px`
+			button.style.left = `${(e.clientX - x) - 130}px`
+
+
+			if (e.clientY >= 79 || window.event.clientY >= 79 ) {
+				
+				button.style.opacity = '0'
+				button.style.transition= 'opacity 0.2s';
+			}
+			
+			if (e.clientY < 79) {
+				button.style.opacity = '0.8'
+				button.style.transition= 'opacity 0.2s'
+			}
+		}
+
+		
 		if (typeof window !== 'undefined') {
 			window.addEventListener('scroll', controlNavbar);
+			navBar.current.addEventListener('mousemove', moveMouse);
 
 			return () => {
 				window.removeEventListener('scroll', controlNavbar);
+				navBar.current.removeEventListener('mousemove', moveMouse);
 			};
 		}
 	}, [scroll]);
-
+	// hover:bg-gradient-to-bl from-[#f5f6ff] via-[#c5e9f7] to-[#889cf1]
 	return (
 		<div
 			as='navbar'
+			ref={navBar}
 			className={
 				navHidden
-					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3]'
-					: 'fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] hover:bg-gradient-to-bl from-[#f5f6ff] via-[#c5e9f7] to-[#889cf1]'
+					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3] overflow-hidden'
+					: `fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] overflow-hidden`
 			}
 		>
+			<button
+				id='shiny'
+				style={{
+					position: 'absolute',
+					top: -50,
+					left: -50,
+					width: '260px',
+					height: '260px',
+					opacity: 0.6,
+					background: 'radial-gradient(#889cf1, #ecf0f3 80%)',
+					borderRadius: '50%',
+					boxShadow: 'none',
+					zIndex: -1,
+				}}
+			/>
 			<div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 				<Link href='/'>
 					<Image
@@ -65,27 +114,27 @@ const NavBar = () => {
 				<div>
 					<ul className='hidden md:flex items-center'>
 						<Link href='/'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
+							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
 								Home
 							</li>
 						</Link>
 						<Link href='/#about'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
+							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
 								About
 							</li>
 						</Link>
 						<Link href='/#skills'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
+							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
 								Skills
 							</li>
 						</Link>
 						<Link href='/#projects'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
+							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
 								Projects
 							</li>
 						</Link>
 						<Link href='/#contact'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5]'>
+							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
 								Contact
 							</li>
 						</Link>
