@@ -1,6 +1,6 @@
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
-import Spline from '@splinetool/react-spline';
+import Rocket from '../Rocket/Rocket';
 
 const Main = props => {
 	const { main } = props;
@@ -56,7 +56,7 @@ const Main = props => {
 					</div>
 				</div>
 				<div className='hidden md:flex items-center w-1/3 h-full'>
-					<Spline scene="https://prod.spline.design/kRL5ZS2Ui00h5T7k/scene.splinecode" />
+					<Rocket />
 				</div>
 			</div>
 		</div>
