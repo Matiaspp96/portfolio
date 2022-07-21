@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['cdn.jsdelivr.net']
   },
   i18n: {
-    defaultLocale: 'es',
+    defaultLocale: 'en',
     locales: ['en', 'es']
   }
 }

@@ -1,7 +1,11 @@
-import Spline from '@splinetool/react-spline';
+import dynamic from 'next/dynamic';
 
-export default function Rocket() {
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
+
+export default function App() {
   return (
-    <Spline scene="https://prod.spline.design/kRL5ZS2Ui00h5T7k/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/kRL5ZS2Ui00h5T7k/scene.splinecode" />
   );
 }
