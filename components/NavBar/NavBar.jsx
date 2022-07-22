@@ -82,8 +82,8 @@ const NavBar = () => {
 			ref={navBar}
 			className={
 				navHidden
-					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3] overflow-hidden'
-					: `fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] overflow-hidden`
+					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3] md:overflow-hidden'
+					: `fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] md:overflow-hidden`
 			}
 		>
 			<button
