@@ -100,6 +100,7 @@ const NavBar = () => {
 					boxShadow: 'none',
 					zIndex: -1,
 				}}
+				className='hidden md:block'
 			/>
 			<div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 				<Link href='/'>
@@ -166,10 +167,12 @@ const NavBar = () => {
 				<div
 					className={
 						nav
-							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 z-10'
 							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
 					}
-				>
+				>	
+					<div onClick={handleNav} className={
+					nav ? 'md:hidden fixed right-0 top-0 w-[25%] sm:w-[40%] md:w-[55%] h-screen z-0' : '' }	 />
 					<div>
 						<div className='flex w-full items-center justify-between'>
 							<Link href='/'>
