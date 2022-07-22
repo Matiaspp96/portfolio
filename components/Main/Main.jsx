@@ -1,14 +1,21 @@
+import { useEffect } from 'react';
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import Rocket from '../Rocket/Rocket';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Main = props => {
 	const { main } = props;
 
+	useEffect(() => {
+		Aos.init({ duration: 2000 })
+	})
+
 	return (
 		<div id='home' className='w-full h-full lg:h-screen text-center pt-12'>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-				<div className='md:w-2/3 z-10'>
+				<div data-aos='fade-up' className='md:w-2/3 z-10'>
 					<p className='uppercase text-sm tracking-widest text-gray-400'>
 						{main.title}
 					</p>

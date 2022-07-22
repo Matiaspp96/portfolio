@@ -90,8 +90,8 @@ const NavBar = () => {
 				id='shiny'
 				style={{
 					position: 'absolute',
-					top: -50,
-					left: -50,
+					top: -500,
+					left: -500,
 					width: '260px',
 					height: '260px',
 					opacity: 0.6,

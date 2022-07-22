@@ -4,11 +4,19 @@ import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import getInTouch from '../../public/assets/Get in touch.jpg';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 const Contact = props => {
 	const { contact } = props;
+
+	useEffect(() => {
+		Aos.init({ duration: 2000 })
+	})	
+
 	return (
-		<div id='contact' className='w-full lg:h-screen'>
+		<div data-aos='fade-up' id='contact' className='w-full lg:h-screen'>
 			<div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
 				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>
 					{contact.title}

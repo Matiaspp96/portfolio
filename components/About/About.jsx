@@ -1,10 +1,18 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 import Me from '../../public/assets/Matias.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const About = (props) => {
 	const { about } = props
+
+	useEffect(() => {
+		Aos.init({ duration: 2000 })
+	})
+
 	return (
-		<div id='about' className='w-full h-full lg:h-screen p-2 flex items-center pt-12'>
+		<div data-aos='fade-up' id='about' className='w-full h-full lg:h-screen p-2 flex items-center pt-12'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
 				<div className='col-span-2'>
 					<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>

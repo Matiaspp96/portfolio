@@ -5,8 +5,11 @@ import Main from '../components/Main/Main';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
 
+
 export default function Home(props) {
 	const { main, about, skills, projects, contact } = props
+
+
 	return (
 		<div>
 			<Head>

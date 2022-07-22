@@ -1,11 +1,19 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import PetElegant from '../../public/assets/Render Pet Elegant.png';
 import Dogs from '../../public/assets/Render Project Dog.png';
 import ProjectItem from './ProjectItem';
 
 const Projects = (props) => {
 	const { projects } = props
+
+	useEffect(() => {
+		Aos.init({ duration: 2000 })
+	})
+
 	return (
-		<div id='projects' className='w-full md:h-screen px-2 pt-24'>
+		<div data-aos='fade-up' id='projects' className='w-full md:h-screen px-2 pt-24'>
 			<div className='max-w-[1240px] mx-auto px-2'>
 				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>
 					{projects.title}
