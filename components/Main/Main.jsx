@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
-import Rocket from '../Rocket/Rocket';
+// import Rocket from '../Rocket/Rocket';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -62,9 +62,9 @@ const Main = props => {
 						</div>
 					</div>
 				</div>
-				<div className='hidden md:flex items-center w-1/3 h-full'>
+				{/* <div className='hidden md:flex items-center w-1/3 h-full'>
 					<Rocket />
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
