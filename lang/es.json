@@ -26,7 +26,9 @@
         "ecommerce2": "Logramos realizar con exito una app con features para 3 roles distintos (Guest, User, Admin), integración con pasarela de pago, registro de usuarios o ingreso con cuenta de Google, envió de emails transaccionales, cuenta con un dashboard para gestión usuarios, ordenes, CRUD de productos.",
         "ecommerce3": "Fui parte del equipo de 6 desarrolladores encargados de la producción de un E-commerce como proyecto final para el bootcamp SoyHenry, llevada a cabo con SCRUM como metodología ágil, presentando cada una semana el progreso del desarrollo de la app",
         "dogs1": "Este proyecto consistió en el desarrollo de una SPA (Single Page Application) realizado con React desde el Client Side y Redux para state management, la cual consume datos proporcionados de una API llamada 'The Dog API' y agrego nuevas funcionalidades a través del Server Side realizado con Node.js y Express.",
-        "dogs2": "Como características del proyecto podemos encontrar que tiene, paginación que muestra 8 diferentes razas de perros por pagina, filtros y ordenamientos, paginas con información para cada raza, búsqueda por nombre de raza (o similitudes en la búsqueda), formulario controlado para la creación de nuevos perros y una mini navegación con el teclado en los detalles de las razas."
+        "dogs2": "Como características del proyecto podemos encontrar que tiene, paginación que muestra 8 diferentes razas de perros por pagina, filtros y ordenamientos, paginas con información para cada raza, búsqueda por nombre de raza (o similitudes en la búsqueda), formulario controlado para la creación de nuevos perros y una mini navegación con el teclado en los detalles de las razas.",
+        "nftdrop1": "",
+        "nftdrop2": ""
     },
     "contact": {
         "title": "Contacto",

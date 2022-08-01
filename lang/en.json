@@ -26,7 +26,9 @@
         "ecommerce2": "We successfully made an app with features for 3 different roles (Guest, User, Admin), integration with payment gateway, user registration or login with Google account, sending transactional emails, has a dashboard for managing users, orders, CRUD products.",
         "ecommerce3": "I was part of a team of 6 developers in charge of the production of an E-commerce as a final project for the SoyHenry bootcamp. Participation in an agile project, with Scrum methodology, presenting every week the progress of the app development.",
         "dogs1": "This project consisted in the development of a SPA (Single Page Application) made with React from the Client Side and Redux for state management, which consumes data provided from an API called 'The Dog API' and added new functionalities through the Server Side made with Node.js and Express.",
-        "dogs2": "As features of the project we can find that it has, pagination that shows 8 different breeds of dogs per page, filters and sorting, pages with information for each breed, search by breed name (or similarities in the search), controlled form for the creation of new dogs and a mini navigation with the keyboard in the details of the breeds."
+        "dogs2": "As features of the project we can find that it has, pagination that shows 8 different breeds of dogs per page, filters and sorting, pages with information for each breed, search by breed name (or similarities in the search), controlled form for the creation of new dogs and a mini navigation with the keyboard in the details of the breeds.",
+        "nftdrop1": "",
+        "nftdrop2": ""
     },
     "contact": {
         "title": "Contact",
