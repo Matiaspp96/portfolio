@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 // import Rocket from '../Rocket/Rocket';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -9,19 +9,21 @@ const Main = props => {
 	const { main } = props;
 
 	useEffect(() => {
-		Aos.init({ duration: 2000 })
-	})
+		Aos.init({ duration: 2000 });
+	});
 
 	return (
 		<div id='home' className='w-full h-full lg:h-screen text-center pt-12'>
-			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-				<div data-aos='fade-up' className='md:w-2/3 z-10'>
-					<p className='uppercase text-sm tracking-widest text-gray-400'>
+			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center 2xl:max-w-[1440px] '>
+				<div data-aos='fade-up' className='md:w-2/3 z-10 2xl:text-2xl'>
+					<p className='uppercase text-sm tracking-widest text-gray-400 2xl:text-2xl'>
 						{main.title}
 					</p>
 					<h1 className='py-4 text-gray-700'>
 						{main.salute}
-						<span className='font-semibold text-transparent bg-clip-text bg-gradient-to-bl from-pink-400 via-[#7d51e5]  to-[#516ce5]'>Matias</span>
+						<span className='font-semibold text-transparent bg-clip-text bg-gradient-to-bl from-pink-400 via-[#7d51e5]  to-[#516ce5]'>
+							Matias
+						</span>
 					</h1>
 					<h1 className='py-4 text-gray-700 '>{main.subtitle}</h1>
 					<p className='py-4 text-gray-600 max-w-[70%] m-auto '>

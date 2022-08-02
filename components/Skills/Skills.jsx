@@ -3,17 +3,17 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-const Skills = (props) => {
-	const { skills } = props
+const Skills = props => {
+	const { skills } = props;
 
 	useEffect(() => {
-		Aos.init({ duration: 2000 })
-	})
+		Aos.init({ duration: 2000 });
+	});
 
 	return (
 		<div data-aos='fade-up' id='skills' className='w-full md:h-full px-2 pt-24'>
 			<div className='max-w-[1240px] bg-[#ecf0f3] flex flex-col mx-auto text-center items-center'>
-				<p className='uppercase text-xl tracking-widest text-[#516ce5]'>
+				<p className='uppercase text-xl tracking-widest text-[#516ce5] 2xl:text-2xl'>
 					{skills.title}
 				</p>
 				{/* <h2 className='py-4'>I have experience whit these technologies</h2> */}

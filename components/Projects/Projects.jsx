@@ -20,7 +20,7 @@ const Projects = props => {
 			className='w-full md:h-screen px-2 pt-24'
 		>
 			<div className='max-w-[1240px] mx-auto px-2'>
-				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5]'>
+				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5] 2xl:text-2xl'>
 					{projects.title}
 				</p>
 				<h2 className='text-center py-4'>{projects.subtitle}</h2>
