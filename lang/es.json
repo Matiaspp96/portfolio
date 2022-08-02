@@ -1,44 +1,47 @@
 {
-    "main": {
-        "title":"Construyamos algo juntos",
-        "subtitle": "Desarrollador Web Front-End",
-        "description": "Soy un desarrollador web front-end especializado en construir y diseñar experiencias digitales excepcionales. Actualmente, estoy enfocado en la construcción de aplicaciones web front-end responsivas mientras aprendo Next.js, TypeScript y Solidity.",
-        "salute": "Hola, soy "
-    },
-    "about": {
-        "title": "Sobre mi",
-        "subtitle": "Quién soy",
-        "paragraph1": "Desarrollador Web Full Stack, Técnico Constructor con formación en Arquitectura y Urbanismo, entusiasta de la tecnología Blokchain. Siempre me encontré motivado y dedicado a desarrollar, representar y ejecutar soluciones que respondan a las necesidades de la gente con diferentes grados de escalabilidad.",
-        "paragraph2": "Brevemente les quisiera contar que siempre me apasionó la informática y comunicarme con un computador, empecé desde pequeño con mantenimientos, reparaciones y despliegues tanto en software como hardware, he transitado por muchas tecnologías de las que aprendí y me vincule en el ámbito laboral y educativo, de ahí hasta el día de hoy que profundicé esta habilidad con la programación orientada al desarrollo web, con la que he logrado desarrollar algunos proyectos (E-commerce, SPA).",
-        "paragraph3": "Dado que además siempre me interesó ayudar en la construcción del conocimiento en otras personas, cuento con 5 años de experiencia en el ámbito educativo donde dicte 3 asignaturas científicas y técnicas, estuve a cargo de grupos, implemente metodologías y aporte herramientas para innovar la transmisión de los contenidos."
-    },
-    "skills":{
-        "title": "Habilidades",
-        "subtitle": "Lo que puedo hacer"
-    },
-    "projects": {
-        "title": "Proyectos",
-        "subtitle": "Lo que he construido",
-        "info": "Más info",
-        "overview": "Descripción",
-        "technologies":"Tecnologias",
-        "ecommerce1": "El sitio web de Pet Elegant es una Single Page Application (SPA). Tiene un diseño compacto y limpio, es rapidísimo y fácilmente navegable. Dado que su grupo objetivo son personas con amor hacia sus mascotas, que quisieran poner en el centro y como protagonistas a sus perros y gatos, con el cuidado y respeto que ellos se merecen. Por eso, el sitio web busca la satisfacción tanto del Pet Lover como de la mascota.",
-        "ecommerce2": "Logramos realizar con exito una app con features para 3 roles distintos (Guest, User, Admin), integración con pasarela de pago, registro de usuarios o ingreso con cuenta de Google, envió de emails transaccionales, cuenta con un dashboard para gestión usuarios, ordenes, CRUD de productos.",
-        "ecommerce3": "Fui parte del equipo de 6 desarrolladores encargados de la producción de un E-commerce como proyecto final para el bootcamp SoyHenry, llevada a cabo con SCRUM como metodología ágil, presentando cada una semana el progreso del desarrollo de la app",
-        "dogs1": "Este proyecto consistió en el desarrollo de una SPA (Single Page Application) realizado con React desde el Client Side y Redux para state management, la cual consume datos proporcionados de una API llamada 'The Dog API' y agrego nuevas funcionalidades a través del Server Side realizado con Node.js y Express.",
-        "dogs2": "Como características del proyecto podemos encontrar que tiene, paginación que muestra 8 diferentes razas de perros por pagina, filtros y ordenamientos, paginas con información para cada raza, búsqueda por nombre de raza (o similitudes en la búsqueda), formulario controlado para la creación de nuevos perros y una mini navegación con el teclado en los detalles de las razas.",
-        "nftdrop1": "",
-        "nftdrop2": ""
-    },
-    "contact": {
-        "title": "Contacto",
-        "subtitle": "Mantente en contacto",
-        "description": "Estoy disponible para puestos de trabajo freelance o a tiempo completo. Contacta conmigo y hablemos.",
-        "connect": "Me puedes encontrar en",
-        "name": "nombre",
-        "phone": "numero de telefono",
-        "subject": "tema",
-        "message": "mensaje",
-        "send": "Enviar Mensaje"
-    }
+	"main": {
+		"title": "Construyamos algo juntos",
+		"subtitle": "Desarrollador Web Front-End",
+		"description": "Soy un desarrollador web front-end especializado en construir y diseñar experiencias digitales excepcionales. Actualmente, estoy enfocado en la construcción de aplicaciones web front-end responsivas mientras aprendo Next.js, TypeScript y Solidity.",
+		"salute": "Hola, soy "
+	},
+	"about": {
+		"title": "Sobre mi",
+		"subtitle": "Quién soy",
+		"paragraph1": "Desarrollador Web Full Stack, Técnico Constructor con formación en Arquitectura y Urbanismo, entusiasta de la tecnología Blokchain. Siempre me encontré motivado y dedicado a desarrollar, representar y ejecutar soluciones que respondan a las necesidades de la gente con diferentes grados de escalabilidad.",
+		"paragraph2": "Brevemente les quisiera contar que siempre me apasionó la informática y comunicarme con un computador, empecé desde pequeño con mantenimientos, reparaciones y despliegues tanto en software como hardware, he transitado por muchas tecnologías de las que aprendí y me vincule en el ámbito laboral y educativo, de ahí hasta el día de hoy que profundicé esta habilidad con la programación orientada al desarrollo web, con la que he logrado desarrollar algunos proyectos (E-commerce, SPA).",
+		"paragraph3": "Dado que además siempre me interesó ayudar en la construcción del conocimiento en otras personas, cuento con 5 años de experiencia en el ámbito educativo donde dicte 3 asignaturas científicas y técnicas, estuve a cargo de grupos, implemente metodologías y aporte herramientas para innovar la transmisión de los contenidos."
+	},
+	"skills": {
+		"title": "Habilidades",
+		"subtitle": "Lo que puedo hacer"
+	},
+	"projects": {
+		"title": "Proyectos",
+		"subtitle": "Lo que he construido",
+		"info": "Más info",
+		"overview": "Descripción",
+		"technologies": "Tecnologias",
+		"ecommerce1": "El sitio web de Pet Elegant es una Tienda Virtual que contiene un diseño compacto y limpio, es rapidísimo y fácilmente navegable. Dado que su grupo objetivo son personas con amor hacia sus mascotas, que quisieran poner en el centro y como protagonistas a sus perros y gatos, con el cuidado y respeto que ellos se merecen. Por eso, el sitio web busca la satisfacción tanto del Pet Lover como de la mascota.",
+		"ecommerce2": "Logramos realizar con exito una app con features para 3 roles distintos (Guest, User, Admin), integración con pasarela de pago, registro de usuarios o ingreso con cuenta de Google, envió de emails transaccionales, cuenta con un dashboard para gestión usuarios, ordenes, CRUD de productos.",
+		"ecommerce3": "Fui parte del equipo de 6 desarrolladores encargados de la producción de un E-commerce como proyecto final para el bootcamp SoyHenry, llevada a cabo con SCRUM como metodología ágil, presentando cada una semana el progreso del desarrollo de la app",
+		"dogs1": "Este proyecto consistió en el desarrollo de una SPA (Single Page Application) realizado con React desde el Client Side y Redux para state management, la cual consume datos proporcionados de una API llamada 'The Dog API' y agrego nuevas funcionalidades a través del Server Side realizado con Node.js y Express.",
+		"dogs2": "Como características del proyecto podemos encontrar que tiene, paginación que muestra 8 diferentes razas de perros por pagina, filtros y ordenamientos, paginas con información para cada raza, búsqueda por nombre de raza (o similitudes en la búsqueda), formulario controlado para la creación de nuevos perros y una mini navegación con el teclado en los detalles de las razas.",
+		"nftdrop1": "Esta dApp o Aplicación Descentralizada consiste en una fácil y simple acuñación de personajes de distintas colecciones NFT's en la red Rinkeby (tesnet de la Blokchain de Ethereum), se realizo con Nextjs como framework de React, Sanity como CMS para el modelado de datos y Thirweb para la conexión con la Blokchain y el despliegue de los smart contracts (ERC721 Standard)",
+		"nftdrop2": "La dApp permite conectarse con Metamask mediante la red Rinkeby y reclamar los NFT's coleccionables con Ethers de prueba como cryptomoneda de pago. Este proyecto lo tomé como una introducción también al lenguaje de programación TypeScript"
+	},
+	"contact": {
+		"title": "Contacto",
+		"subtitle": "Mantente en contacto",
+		"description": "Estoy disponible para puestos de trabajo freelance o a tiempo completo. Contacta conmigo y hablemos.",
+		"connect": "Me puedes encontrar en",
+		"name": "nombre",
+		"phone": "numero de telefono",
+		"subject": "tema",
+		"message": "mensaje",
+		"send": "Enviar Mensaje"
+	},
+	"footer": {
+		"made": "Made with ❤ by Matias Palomo"
+	}
 }

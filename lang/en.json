@@ -1,44 +1,47 @@
 {
-    "main": {
-        "title":"Let's build something together",
-        "subtitle": "A Front-End Web Developer",
-        "description": "I'm a front-end web developer specializing in building and designing exceptional digital experiences. Currently, I'm focused on building responsive front-end web applications while learning Next.js, TypeScript and Solidity.",
-        "salute": "Hi, I'm "
-    },
-    "about": {
-        "title": "about",
-        "subtitle": "Who I Am",
-        "paragraph1": "Full Stack Web Developer, Builder Technical with a background in Architecture and a Blokchain technology enthusiast. I always found myself motivated and dedicated to develop, represent and execute solutions that responds to the needs people's with different degrees of scalability.",
-        "paragraph2": "Briefly I would like to tell you that I have always been passionate about computers and communicating with a computer, I started as a child with maintenance, repairs and deployments in both software and hardware, I have gone through many technologies that I learned and linked me in the workplace and education, from there until today that I deepened this skill with programming oriented to web development, with which I have developed some projects (E-commerce, SPA).",
-        "paragraph3": "Since I have always been interested in helping in the construction of knowledge in other people, I have 5 years of experience in the educational field where I taught 3 scientific and technical subjects, I was in charge of groups, implemented methodologies and provided tools to innovate the transmission of content."
-    },
-    "skills":{
-        "title": "skills",
-        "subtitle": "What I Can Do"
-    },
-    "projects": {
-        "title": "projects",
-        "subtitle": "What I've Built",
-        "info": "More info",
-        "overview": "Overview",
-        "technologies":"Technologies",
-        "ecommerce1": "The Pet Elegant website is a Single Page Application (SPA). It has a compact and clean design, is lightning fast and easily navigable. Since its target are people with love for their pets, who would like to put their dogs and cats at the center and as protagonists, with the care and respect they deserve. Therefore, the website seeks the satisfaction of both the Pet Lover and the pet.",
-        "ecommerce2": "We successfully made an app with features for 3 different roles (Guest, User, Admin), integration with payment gateway, user registration or login with Google account, sending transactional emails, has a dashboard for managing users, orders, CRUD products.",
-        "ecommerce3": "I was part of a team of 6 developers in charge of the production of an E-commerce as a final project for the SoyHenry bootcamp. Participation in an agile project, with Scrum methodology, presenting every week the progress of the app development.",
-        "dogs1": "This project consisted in the development of a SPA (Single Page Application) made with React from the Client Side and Redux for state management, which consumes data provided from an API called 'The Dog API' and added new functionalities through the Server Side made with Node.js and Express.",
-        "dogs2": "As features of the project we can find that it has, pagination that shows 8 different breeds of dogs per page, filters and sorting, pages with information for each breed, search by breed name (or similarities in the search), controlled form for the creation of new dogs and a mini navigation with the keyboard in the details of the breeds.",
-        "nftdrop1": "",
-        "nftdrop2": ""
-    },
-    "contact": {
-        "title": "Contact",
-        "subtitle": "Get In Touch",
-        "description": "I am available for freelance or full-time positions. Contact me and let's talk.",
-        "connect": "Connect with me",
-        "name": "name",
-        "phone": "phone number",
-        "subject": "subject",
-        "message": "message",
-        "send": "Send Message"
-    }
+	"main": {
+		"title": "Let's build something together",
+		"subtitle": "A Front-End Web Developer",
+		"description": "I'm a front-end web developer specializing in building and designing exceptional digital experiences. Currently, I'm focused on building responsive front-end web applications while learning Next.js, TypeScript and Solidity.",
+		"salute": "Hi, I'm "
+	},
+	"about": {
+		"title": "about",
+		"subtitle": "Who I Am",
+		"paragraph1": "Full Stack Web Developer, Builder Technical with a background in Architecture and a Blokchain technology enthusiast. I always found myself motivated and dedicated to develop, represent and execute solutions that responds to the needs people's with different degrees of scalability.",
+		"paragraph2": "Briefly I would like to tell you that I have always been passionate about computers and communicating with a computer, I started as a child with maintenance, repairs and deployments in both software and hardware, I have gone through many technologies that I learned and linked me in the workplace and education, from there until today that I deepened this skill with programming oriented to web development, with which I have developed some projects (E-commerce, SPA).",
+		"paragraph3": "Since I have always been interested in helping in the construction of knowledge in other people, I have 5 years of experience in the educational field where I taught 3 scientific and technical subjects, I was in charge of groups, implemented methodologies and provided tools to innovate the transmission of content."
+	},
+	"skills": {
+		"title": "skills",
+		"subtitle": "What I Can Do"
+	},
+	"projects": {
+		"title": "projects",
+		"subtitle": "What I've Built",
+		"info": "More info",
+		"overview": "Overview",
+		"technologies": "Technologies",
+		"ecommerce1": "The Pet Elegant website is a Single Page Application (SPA). It has a compact and clean design, is lightning fast and easily navigable. Since its target are people with love for their pets, who would like to put their dogs and cats at the center and as protagonists, with the care and respect they deserve. Therefore, the website seeks the satisfaction of both the Pet Lover and the pet.",
+		"ecommerce2": "We successfully made an app with features for 3 different roles (Guest, User, Admin), integration with payment gateway, user registration or login with Google account, sending transactional emails, has a dashboard for managing users, orders, CRUD products.",
+		"ecommerce3": "I was part of a team of 6 developers in charge of the production of an E-commerce as a final project for the SoyHenry bootcamp. Participation in an agile project, with Scrum methodology, presenting every week the progress of the app development.",
+		"dogs1": "This project consisted in the development of a SPA (Single Page Application) made with React from the Client Side and Redux for state management, which consumes data provided from an API called 'The Dog API' and added new functionalities through the Server Side made with Node.js and Express.",
+		"dogs2": "As features of the project we can find that it has, pagination that shows 8 different breeds of dogs per page, filters and sorting, pages with information for each breed, search by breed name (or similarities in the search), controlled form for the creation of new dogs and a mini navigation with the keyboard in the details of the breeds.",
+		"nftdrop1": "This dApp or Decentralized Application consists of an easy and simple minting of characters from different NFT's collections in the Rinkeby network (Ethereum's Blokchain tesnet), it was made with Nextjs as React framework, Sanity as CMS for data modeling and Thirweb for the connection with the Blokchain and the deployment of smart contracts (ERC721 Standard).",
+		"nftdrop2": "The dApp allows you to connect to Metamask via the Rinkeby network and claim collectible NFT's with Ethers as payment cryptocurrency. I took this project as an introduction to the TypeScript programming language."
+	},
+	"contact": {
+		"title": "Contact",
+		"subtitle": "Get In Touch",
+		"description": "I am available for freelance or full-time positions. Contact me and let's talk.",
+		"connect": "Connect with me",
+		"name": "name",
+		"phone": "phone number",
+		"subject": "subject",
+		"message": "message",
+		"send": "Send Message"
+	},
+	"footer": {
+		"made": "Made with ❤ by Matias Palomo"
+	}
 }

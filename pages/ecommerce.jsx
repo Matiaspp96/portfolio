@@ -12,8 +12,8 @@ import {
 } from 'react-icons/si';
 import PetElegant from '../public/assets/Render Pet Elegant.png';
 
-const ecommerce = (props) => {
-	const {projects} = props
+const ecommerce = props => {
+	const { projects } = props;
 	return (
 		<div className='w-full'>
 			<div className='w-full h-full pt-20 relative flex flex-col items-center'>
@@ -35,15 +35,9 @@ const ecommerce = (props) => {
 				<div className='max-w-[1240px] mx-5 p-2 grid md:grid-cols-5 gap-8 pt-8'>
 					<div className='col-span-4'>
 						<h2>{projects.overview}</h2>
-						<p className='py-2'>
-							{projects.ecommerce1}
-						</p>
-						<p className='py-2'>
-							{projects.ecommerce2}
-						</p>
-						<p className='py-2'>
-							{projects.ecommerce3}
-						</p>
+						<p className='py-2'>{projects.ecommerce1}</p>
+						<p className='py-2'>{projects.ecommerce2}</p>
+						<p className='py-2'>{projects.ecommerce3}</p>
 						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300'>
 							<a
 								href='https://petelegant.vercel.app/'
@@ -65,7 +59,9 @@ const ecommerce = (props) => {
 					</div>
 					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
 						<div className='p-2'>
-							<p className='text-center font-bold pb-2'>{projects.technologies}</p>
+							<p className='text-center font-bold pb-2'>
+								{projects.technologies}
+							</p>
 							<div className='grid grid-cols-3 md:grid-cols-1'>
 								<p className='text-gray-600 py-2 flex items-center'>
 									<IoLogoJavascript className='mr-2' /> JavaScript{' '}
@@ -112,11 +108,11 @@ const ecommerce = (props) => {
 export default ecommerce;
 
 export async function getStaticProps({ locale }) {
-	const response = await import(`../lang/${locale}.json`)
+	const response = await import(`../lang/${locale}.json`);
 
 	return {
 		props: {
 			projects: response.projects,
-		}
-	}
+		},
+	};
 }
