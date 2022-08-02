@@ -13,7 +13,10 @@ const Main = props => {
 	});
 
 	return (
-		<div id='home' className='w-full h-full lg:h-screen text-center pt-12'>
+		<div
+			id='home'
+			className='w-full h-full pt-32 lg:h-screen text-center lg:pt-12'
+		>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center 2xl:max-w-[1440px] '>
 				<div data-aos='fade-up' className='md:w-2/3 z-10 2xl:text-2xl'>
 					<p className='uppercase text-sm tracking-widest text-gray-400 2xl:text-2xl'>

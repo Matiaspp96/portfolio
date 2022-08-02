@@ -17,7 +17,7 @@ const Contact = props => {
 
 	return (
 		<div data-aos='fade-up' id='contact' className='w-full lg:h-screen'>
-			<div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+			<div className='max-w-[1240px] m-auto px-2 pt-16 w-full'>
 				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5] 2xl:text-2xl'>
 					{contact.title}
 				</p>

@@ -40,31 +40,26 @@ const NavBar = () => {
 
 	const navBar = useRef();
 
-	
 	useEffect(() => {
-		const button = document.getElementById('shiny')
-		
+		const button = document.getElementById('shiny');
+
 		const { x, y } = navBar.current.getBoundingClientRect();
 
-		function moveMouse (e) {
-	
-			button.style.top = `${(e.clientY - y) - 130}px`
-			button.style.left = `${(e.clientX - x) - 130}px`
+		function moveMouse(e) {
+			button.style.top = `${e.clientY - y - 130}px`;
+			button.style.left = `${e.clientX - x - 130}px`;
 
-
-			if (e.clientY >= 79 || window.event.clientY >= 79 ) {
-				
-				button.style.opacity = '0'
-				button.style.transition= 'opacity 0.2s';
+			if (e.clientY >= 79 || window.event.clientY >= 79) {
+				button.style.opacity = '0';
+				button.style.transition = 'opacity 0.2s';
 			}
-			
+
 			if (e.clientY < 79) {
-				button.style.opacity = '0.8'
-				button.style.transition= 'opacity 0.2s'
+				button.style.opacity = '0.8';
+				button.style.transition = 'opacity 0.2s';
 			}
 		}
 
-		
 		if (typeof window !== 'undefined') {
 			window.addEventListener('scroll', controlNavbar);
 			navBar.current.addEventListener('mousemove', moveMouse);
@@ -99,19 +94,22 @@ const NavBar = () => {
 					borderRadius: '50%',
 					boxShadow: 'none',
 					zIndex: -1,
+					filter: 'blur(30px)',
 				}}
 				className='hidden md:block'
 			/>
 			<div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-				<Link href='/'>
-					<Image
-						className='cursor-pointer'
-						src={Logo}
-						alt='Logo'
-						width='105'
-						height='70'
-					/>
-				</Link>
+				<div className='flex items-center hover:scale-105 hover:ease-in hover:duration-200'>
+					<Link href='/'>
+						<Image
+							className='cursor-pointer'
+							src={Logo}
+							alt='Logo'
+							width='105'
+							height='70'
+						/>
+					</Link>
+				</div>
 				<div>
 					<ul className='hidden md:flex items-center'>
 						<Link href='/'>
@@ -167,12 +165,18 @@ const NavBar = () => {
 				<div
 					className={
 						nav
-							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 z-10'
-							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700 z-10'
+							: 'fixed left-[-100%] top-0 p-10 ease-in duration-700'
 					}
-				>	
-					<div onClick={handleNav} className={
-					nav ? 'md:hidden fixed right-0 top-0 w-[25%] sm:w-[40%] md:w-[55%] h-screen z-0' : '' }	 />
+				>
+					<div
+						onClick={handleNav}
+						className={
+							nav
+								? 'md:hidden fixed right-0 top-0 w-[25%] sm:w-[40%] md:w-[55%] h-screen z-0'
+								: ''
+						}
+					/>
 					<div>
 						<div className='flex w-full items-center justify-between'>
 							<Link href='/'>
