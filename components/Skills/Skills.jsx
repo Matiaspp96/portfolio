@@ -19,25 +19,36 @@ const Skills = props => {
 				{/* <h2 className='py-4'>I have experience whit these technologies</h2> */}
 				<h2 className='py-4'>{skills.subtitle}</h2>
 				<div className='grid grid-cols-4 gap-5 grid-auto md:gap-14'>
-					<div className='hover:animate-[pulse_1s_ease-in-out_infinite]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
 							alt='The logo icon for react'
 							title='React'
 							width={150}
 							height={150}
 						/>
+						<h4>React</h4>
 					</div>
-					<div className='hover:animate-[spin_5s_ease-out]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg'
 							alt='The logo icon for nextjs'
 							title='Next.js'
 							width={150}
 							height={150}
 						/>
+						<h4>Next.js</h4>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
 							alt='The logo icon for javascript'
@@ -45,8 +56,66 @@ const Skills = props => {
 							width={150}
 							height={150}
 						/>
+						<h4>JavaScript</h4>
 					</div>
-					<div className='hover:animate-[bounce_1s_ease-out]'>
+
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
+						<Image
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+							alt='The logo icon for git'
+							title='Git'
+							width={150}
+							height={150}
+						/>
+						<h4>Git</h4>
+					</div>
+
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
+						<Image
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+							alt='The logo icon for html5'
+							title='HTML5'
+							width={150}
+							height={150}
+						/>
+						<h4>HTML5</h4>
+					</div>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
+						<Image
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+							alt='The logo icon for css'
+							title='CSS3'
+							width={150}
+							height={150}
+						/>
+						<h4>CSS3</h4>
+					</div>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
+						<Image
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg'
+							alt='The logo icon for tailwindcss'
+							title='Tailwind'
+							width={150}
+							height={150}
+						/>
+						<h4>Tailwindcss</h4>
+					</div>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
 							alt='The logo icon for redux'
@@ -54,55 +123,28 @@ const Skills = props => {
 							width={150}
 							height={150}
 						/>
-					</div>
-					<div className='hover:animate-[lightSpeedL_2s_ease-out_infinite]'>
-						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg'
-							alt='The logo icon for html5'
-							title='HTML5'
-							width={150}
-							height={150}
-						/>
-					</div>
-					<div className='hover:animate-[ping_1s_ease-out]'>
-						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg'
-							alt='The logo icon for css'
-							title='CSS3'
-							width={150}
-							height={150}
-						/>
-					</div>
-					<div className='hover:animate-[wiggle_1s_ease-out_infinite]'>
-						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg'
-							alt='The logo icon for tailwindcss'
-							title='Tailwind'
-							width={150}
-							height={150}
-						/>
-					</div>
-					<div className='animate-[fadeUp_1s_ease-out] hover:animate-[movement_2s_ease-out_infinite]'>
-						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
-							alt='The logo icon for figma'
-							title='Figma'
-							width={150}
-							height={150}
-						/>
+						<h4>Redux</h4>
 					</div>
 					{/* </div>
 				<div className='grid grid-cols-4 mt-5 px-5 gap-5 grid-auto md:gap-16'> */}
-					<div className='hover:animate-[roll_2s_ease-out_infinite]'>
+					<div
+						className='hover:scale-105 ease-in duration-300 '
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg'
-							alt='The logo icon for git'
-							title='Git'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+							alt='The logo icon for typescript'
+							title='TypeScript'
 							width={150}
 							height={150}
 						/>
+						<h4>TypeScript</h4>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
 							alt='The logo icon for nodejs'
@@ -110,53 +152,77 @@ const Skills = props => {
 							width={150}
 							height={150}
 						/>
+						<h4>Node.js</h4>
 					</div>
-					<div className='hover:animate-[movement_2s_ease-out_infinite]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
 							alt='The logo icon for express'
 							title='Express'
 							width={150}
 							height={150}
 						/>
+						<h4>Express</h4>
 					</div>
-					<div className='hover:animate-[lightSpeed_2s_ease-out_infinite]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg'
 							alt='The logo icon for postgresql'
 							title='PostgreSQL'
 							width={150}
 							height={150}
 						/>
+						<h4>Postgre SQL</h4>
 					</div>
-					<div className='hover:animate-[pulse_1s_ease-in-out_infinite]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
 							alt='The logo icon for mongodb'
 							title='MongoDB'
 							width={150}
 							height={150}
 						/>
+						<h4>MongoDB</h4>
 					</div>
-					<div className='hover:scale-105 ease-in duration-300'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg'
-							alt='The logo icon for sequelize'
-							title='Sequelize'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg'
+							alt='The logo icon for solidity'
+							title='Solidity'
 							width={150}
 							height={150}
 						/>
+						<h4>Solidity</h4>
 					</div>
-					<div className='hover:animate-[spin_5s_ease-out]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg'
-							alt='The logo icon for heroku'
-							title='Heroku'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+							alt='The logo icon for figma'
+							title='Figma'
 							width={150}
 							height={150}
 						/>
+						<h4>Figma</h4>
 					</div>
-					<div className='hover:animate-[ping_1s_ease-out]'>
+					<div
+						className='hover:scale-105 ease-in duration-300'
+						data-aos='fade-up'
+					>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
 							alt='The logo icon for github'
@@ -164,6 +230,7 @@ const Skills = props => {
 							width={150}
 							height={150}
 						/>
+						<h4>GitHub</h4>
 					</div>
 				</div>
 			</div>

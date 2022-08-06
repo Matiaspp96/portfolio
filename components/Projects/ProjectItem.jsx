@@ -1,10 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-const ProjectItem = ({ title, backgroundImg, url, subtitle, info }) => {
+const ProjectItem = ({ title, backgroundImg, url, subtitle, info, even }) => {
+	useEffect(() => {
+		Aos.init({ duration: 2000 });
+	});
 	return (
 		<Link href={url} className='cursor-pointer'>
-			<div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:transition-opacity hover:bg-gradient-radial from-[#516ce5]/100 to-[#709dff]/100 hover:ease-in hover:duration-500'>
+			<div
+				data-aos='fade-up'
+				className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:transition-opacity hover:bg-gradient-radial from-[#516ce5]/100 to-[#709dff]/100 hover:ease-in hover:duration-500'
+			>
 				<Image
 					className='rounded-xl group-hover:opacity-10 '
 					src={backgroundImg}

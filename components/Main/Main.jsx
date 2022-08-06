@@ -18,7 +18,11 @@ const Main = props => {
 			className='w-full h-full pt-32 lg:h-screen text-center lg:pt-12'
 		>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center 2xl:max-w-[1440px] '>
-				<div data-aos='fade-up' className='md:w-2/3 z-10 2xl:text-2xl'>
+				<div data-aos='fade-up' className='relative z-10 2xl:text-2xl'>
+					<div className='absolute -z-10 top-0 left-1/4  w-40 h-40 md:w-72 md:h-72 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob bg-purple-500' />
+					<div className='absolute -z-10 top-0 right-1/4  w-40 h-40 md:w-72 md:h-72 rounded-full mix-blend-multiply filter blur-2xl opacity-50  animate-blob animation-delay-2000 bg-cyan-500' />
+					<div className='absolute -z-10 top-20 left-1/3  w-40 h-40 md:w-72 md:h-72 rounded-full mix-blend-multiply filter blur-2xl opacity-50  animate-blob animation-delay-4000 bg-pink-500' />
+
 					<p className='uppercase text-sm tracking-widest text-gray-400 2xl:text-2xl'>
 						{main.title}
 					</p>

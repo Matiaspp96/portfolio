@@ -27,7 +27,9 @@ const About = props => {
 					<p className='p-2 text-gray-600 2xl:text-xl'>{about.paragraph2}</p>
 					<p className='p-2 text-gray-600 2xl:text-xl'>{about.paragraph3}</p>
 				</div>
-				<div className='w-fit h-auto m-auto border-2 border-[#516ce5] shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-1 hover:border-sky-300 hover:scale-105 ease-in duration-300'>
+				<div className='w-fit h-auto m-auto border-2 border-[#516ce5] shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center relative p-1 hover:border-sky-300 hover:scale-105 ease-in duration-300'>
+					<div className='absolute -z-10 bottom-24 w-72 h-96 md:w-72 md:h-full md:bottom-0 md:right-0 2xl:bottom-28 rounded-full mix-blend-multiply filter blur-2xl opacity-50  animate-blob2 animation-delay-2000 bg-cyan-500' />
+					<div className='absolute -z-10 bottom-24 w-72 h-96 md:w-72 md:h-full md:bottom-0 md:right-0 2xl:bottom-24 rounded-full mix-blend-multiply filter blur-2xl opacity-50  animate-blob2 animation-delay-4000 bg-pink-500' />
 					{/* Image className='rounded-xl animate-[flipX_2s_ease-out_infinite]' */}
 					<Image
 						className='rounded-xl'
