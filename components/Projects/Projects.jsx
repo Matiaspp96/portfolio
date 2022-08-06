@@ -25,8 +25,8 @@ const Projects = props => {
 				</p>
 				<h2 className='text-center py-4'>{projects.subtitle}</h2>
 				<div className='grid md:grid-cols-2 gap-8 relative'>
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 animation-delay-2000 bg-cyan-500' />
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 animation-delay-4000 bg-pink-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 delay-200 md:animate-blob3 md:animation-delay-2000 bg-cyan-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 md:animation-delay-4000 bg-pink-500' />
 					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-0 md:opacity-50 animate-blob4 md:animate-blob3 bg-purple-500' />
 					<ProjectItem
 						title='Pet Elegant'
