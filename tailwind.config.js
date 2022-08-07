@@ -37,6 +37,19 @@ module.exports = {
 					'66%': { transform: 'translateY(-20rem) scale(0.9)' },
 					'100%': { transform: 'translate(0px, 0px) scale(1)' },
 				},
+				blob5: {
+					'0%': { transform: 'translate(0px, 0px) scale(1)' },
+					'25%': {
+						transform: 'translate(10rem, 0px) scale(1.2)',
+					},
+					'50%': {
+						transform: 'translate(0px, 28rem) scale(0.9)',
+					},
+					'75%': {
+						transform: 'translate(10rem, 28rem) scale(0.9)',
+					},
+					'100%': { transform: 'translate(0px, 0px) scale(1)' },
+				},
 				wiggle: {
 					'0%, 100%': { transform: 'rotate(-3deg)' },
 					'50%': { transform: 'rotate(3deg)' },
@@ -108,6 +121,7 @@ module.exports = {
 				blob2: 'blob2 7s infinite',
 				blob3: 'blob3 7s infinite',
 				blob4: 'blob4 7s infinite',
+				blob5: 'blob5 10s infinite',
 			},
 		},
 	},

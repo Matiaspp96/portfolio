@@ -18,11 +18,12 @@ const Skills = props => {
 				</p>
 				{/* <h2 className='py-4'>I have experience whit these technologies</h2> */}
 				<h2 className='py-4'>{skills.subtitle}</h2>
-				<div className='grid grid-cols-4 gap-5 grid-auto md:gap-14'>
+				<div className='grid grid-cols-3 md:grid-cols-4 gap-5 grid-auto md:gap-14 '>
 					<div
 						className='hover:scale-105 ease-in duration-300'
 						data-aos='fade-up'
 					>
+						<div className='absolute -z-10 w-32 h-32 top-20 rounded-full filter blur-2xl opacity-50 animate-blob5 md:hidden bg-cyan-500' />
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
 							alt='The logo icon for react'
@@ -220,7 +221,7 @@ const Skills = props => {
 						<h4>Figma</h4>
 					</div>
 					<div
-						className='hover:scale-105 ease-in duration-300'
+						className='hidden md:block hover:scale-105 ease-in duration-300'
 						data-aos='fade-up'
 					>
 						<Image
