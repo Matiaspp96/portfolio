@@ -40,13 +40,13 @@ module.exports = {
 				blob5: {
 					'0%': { transform: 'translate(0px, 0px) scale(1)' },
 					'25%': {
-						transform: 'translate(10rem, 0px) scale(1.2)',
+						transform: 'translate(12rem, 0px) scale(1.2)',
 					},
 					'50%': {
 						transform: 'translate(0px, 28rem) scale(0.9)',
 					},
 					'75%': {
-						transform: 'translate(10rem, 28rem) scale(0.9)',
+						transform: 'translate(12rem, 28rem) scale(0.9)',
 					},
 					'100%': { transform: 'translate(0px, 0px) scale(1)' },
 				},
