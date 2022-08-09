@@ -143,7 +143,7 @@ const NavBar = () => {
 							name='language'
 							id=''
 						>
-							<option selected defaultValue=''>
+							<option selected defaultValue='en'>
 								Language
 							</option>
 							<option value='es'>ES</option>
@@ -234,7 +234,7 @@ const NavBar = () => {
 								name='language'
 								id=''
 							>
-								<option selected defaultValue=''>
+								<option selected defaultValue='en'>
 									Language
 								</option>
 								<option value='es'>ES</option>
