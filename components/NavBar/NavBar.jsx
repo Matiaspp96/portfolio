@@ -15,6 +15,7 @@ const NavBar = () => {
 	const [nav, setNav] = useState(false);
 	const [scroll, setScroll] = useState(0);
 	const [navHidden, setNavHidden] = useState(false);
+	const [language, setLanguage] = useState('es');
 	const router = useRouter();
 
 	const handleNav = () => {
@@ -36,6 +37,7 @@ const NavBar = () => {
 		router.push(router.pathname, router.pathname, {
 			locale: e.target.value,
 		});
+		setLanguage(e.target.value);
 	};
 
 	const navBar = useRef();
@@ -142,8 +144,9 @@ const NavBar = () => {
 							className='ml-10 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none'
 							name='language'
 							id=''
+							value={language}
 						>
-							<option selected value='en'>
+							<option defaultValue='default' disabled>
 								Language
 							</option>
 							<option value='es'>ES</option>

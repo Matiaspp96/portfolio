@@ -5,6 +5,8 @@ import PetElegant from '../../public/assets/Render Pet Elegant.png';
 import Dogs from '../../public/assets/Render Project Dog.png';
 import NFTDrop from '../../public/assets/Render NFT Drop.png';
 import ProjectItem from './ProjectItem';
+import Taskhub from '../../public/assets/Taskhub mockup.png';
+import Bonvo from '../../public/assets/Bonvo mockup.png';
 
 const Projects = props => {
 	const { projects } = props;
@@ -25,8 +27,8 @@ const Projects = props => {
 				</p>
 				<h2 className='text-center py-4'>{projects.subtitle}</h2>
 				<div className='grid md:grid-cols-2 gap-8 relative place-items-center md:place-items-stretch'>
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 animation-delay-2000 md:animate-blob3 md:animation-delay-2000 bg-cyan-500' />
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 md:animation-delay-4000 bg-pink-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 animation-delay-2000 md:animate-blob3 md:animation-delay-4000 bg-cyan-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 md:animation-delay-7000 bg-pink-500' />
 					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl hidden md:block md:opacity-50 animate-blob4 md:animate-blob3 bg-purple-500' />
 					<ProjectItem
 						title='Pet Elegant'
@@ -49,6 +51,22 @@ const Projects = props => {
 						backgroundImg={NFTDrop}
 						url='/nftdrop'
 						subtitle='Next.js | Web3'
+						info={projects.info}
+						even={true}
+					/>
+					<ProjectItem
+						title='Marketplace Real Estate Web3'
+						backgroundImg={Bonvo}
+						url='/bonvo'
+						subtitle='React | Web3'
+						info={projects.info}
+						even={false}
+					/>
+					<ProjectItem
+						title='TaskHub'
+						backgroundImg={Taskhub}
+						url='/taskhub'
+						subtitle='Next.js | GraphQL'
 						info={projects.info}
 						even={true}
 					/>
