@@ -14,6 +14,50 @@ import PetElegant from '../public/assets/Render Pet Elegant.png';
 
 const ecommerce = props => {
 	const { projects } = props;
+
+	const technologies = [
+		{
+			name: 'Javascript',
+			icon: <IoLogoJavascript className='mr-2' />,
+		},
+		{
+			name: 'Next.js',
+			icon: <SiNextdotjs className='mr-2' />,
+		},
+		{
+			name: 'React',
+			icon: <SiRedux className='mr-2' />,
+		},
+		{
+			name: 'Chakra UI',
+			icon: <SiChakraui className='mr-2' />,
+		},
+		{
+			name: 'Node.js',
+			icon: <IoLogoNodejs className='mr-2' />,
+		},
+		{
+			name: 'Express',
+			icon: <SiExpress className='mr-2' />,
+		},
+		{
+			name: 'MongoDB',
+			icon: <SiMongodb className='mr-2' />,
+		},
+		{
+			name: 'Passport.js',
+			icon: <SiPassport className='mr-2' />,
+		},
+		{
+			name: 'Google Auth',
+			icon: <SiGoogle className='mr-2' />,
+		},
+		{
+			name: 'Framer Motion',
+			icon: <SiFramer className='mr-2' />,
+		},
+	];
+
 	return (
 		<div className='w-full'>
 			<div className='w-full h-full pt-20 relative flex flex-col items-center'>
@@ -29,16 +73,16 @@ const ecommerce = props => {
 						<h2 className='uppercase text-2xl text-center tracking-widest text-[#516ce5]'>
 							Pet Elegant
 						</h2>
-						<h3>Next.js | Express | MongoDb</h3>
+						<h3 className='dark:text-stone-300'>Next.js | Express | MongoDb</h3>
 					</div>
 				</div>
 				<div className='max-w-[1240px] mx-5 p-2 grid md:grid-cols-5 gap-8 pt-8'>
 					<div className='col-span-4'>
-						<h2>{projects.overview}</h2>
-						<p className='py-2'>{projects.ecommerce1}</p>
-						<p className='py-2'>{projects.ecommerce2}</p>
-						<p className='py-2'>{projects.ecommerce3}</p>
-						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300'>
+						<h2 className='dark:text-stone-300'>{projects.overview}</h2>
+						<p className='py-2 dark:text-stone-300'>{projects.ecommerce1}</p>
+						<p className='py-2 dark:text-stone-300'>{projects.ecommerce2}</p>
+						<p className='py-2 dark:text-stone-300'>{projects.ecommerce3}</p>
+						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300 dark:shadow-md dark:shadow-zinc-700'>
 							<a
 								href='https://petelegant.vercel.app/'
 								target='_blank'
@@ -47,7 +91,7 @@ const ecommerce = props => {
 								Demo
 							</a>
 						</button>
-						<button className='px-8 py-2 mt-4 hover:scale-105 ease-in duration-300'>
+						<button className='px-8 py-2 mt-4 hover:scale-105 ease-in duration-300 dark:shadow-md dark:shadow-zinc-700'>
 							<a
 								href='https://github.com/Matiaspp96/PF-04-Ecommerce/'
 								target='_blank'
@@ -57,45 +101,20 @@ const ecommerce = props => {
 							</a>
 						</button>
 					</div>
-					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
+					<div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4 dark:shadow-md dark:shadow-zinc-700'>
 						<div className='p-2'>
-							<p className='text-center font-bold pb-2'>
+							<p className='text-center font-bold pb-2 dark:text-stone-300'>
 								{projects.technologies}
 							</p>
 							<div className='grid grid-cols-3 md:grid-cols-1'>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<IoLogoJavascript className='mr-2' /> JavaScript{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiNextdotjs className='mr-2' /> Next.js{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiRedux className='mr-2' /> Redux{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiChakraui className='mr-2' /> ChakraUI{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<IoLogoNodejs className='mr-2' /> Node.js{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiExpress className='mr-2' /> Express{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiMongodb className='mr-2' /> MongoDB{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiGoogle className='mr-2' />
-									Google API{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiPassport className='mr-2' />
-									Passport{' '}
-								</p>
-								<p className='text-gray-600 py-2 flex items-center'>
-									<SiFramer className='mr-2' />
-									Framer Motion
-								</p>
+								{technologies.map((tech, index) => (
+									<div key={index}>
+										<p className='text-gray-600 py-2 flex items-center dark:text-stone-300'>
+											{tech.icon}
+											{tech.name}
+										</p>
+									</div>
+								))}
 							</div>
 						</div>
 					</div>

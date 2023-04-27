@@ -22,14 +22,16 @@ const Projects = props => {
 			className='w-full md:h-full px-2 pt-24'
 		>
 			<div className='max-w-[1240px] mx-auto px-2'>
-				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5] 2xl:text-2xl'>
+				<p className='uppercase text-xl text-center tracking-widest text-[#516ce5] 2xl:text-2xl '>
 					{projects.title}
 				</p>
-				<h2 className='text-center py-4'>{projects.subtitle}</h2>
+				<h2 className='text-center py-4 dark:text-stone-300'>
+					{projects.subtitle}
+				</h2>
 				<div className='grid md:grid-cols-2 gap-8 relative place-items-center md:place-items-stretch'>
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 animation-delay-2000 md:animate-blob3 md:animation-delay-4000 bg-cyan-500' />
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 md:animate-blob3 md:animation-delay-7000 bg-pink-500' />
-					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl hidden md:block md:opacity-50 animate-blob4 md:animate-blob3 bg-purple-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 animation-delay-2000 lg:animate-blob3 lg:animation-delay-4000 bg-cyan-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob4 lg:animate-blob3 lg:animation-delay-7000 bg-pink-500' />
+					<div className='absolute -z-10 w-72 h-72 top-56 rounded-full mix-blend-multiply filter blur-2xl hidden md:block lg:opacity-50 animate-blob4 lg:animate-blob3 bg-purple-500' />
 					<ProjectItem
 						title='Pet Elegant'
 						backgroundImg={PetElegant}

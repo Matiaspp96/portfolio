@@ -5,10 +5,8 @@ import Main from '../components/Main/Main';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
 
-
 export default function Home(props) {
-	const { main, about, skills, projects, contact } = props
-
+	const { main, about, skills, projects, contact } = props;
 
 	return (
 		<div>
@@ -22,9 +20,8 @@ export default function Home(props) {
 	);
 }
 
-
 export async function getStaticProps({ locale }) {
-	const response = await import(`../lang/${locale}.json`)
+	const response = await import(`../lang/${locale}.json`);
 
 	return {
 		props: {
@@ -32,7 +29,7 @@ export async function getStaticProps({ locale }) {
 			about: response.about,
 			skills: response.skills,
 			projects: response.projects,
-			contact: response.contact
-		}
-	}
+			contact: response.contact,
+		},
+	};
 }

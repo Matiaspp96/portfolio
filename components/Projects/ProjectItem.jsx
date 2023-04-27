@@ -12,7 +12,7 @@ const ProjectItem = ({ title, backgroundImg, url, subtitle, info, even }) => {
 		<Link href={url} className='cursor-pointer'>
 			<div
 				data-aos='fade-up'
-				className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:transition-opacity hover:bg-gradient-radial from-[#516ce5]/100 to-[#709dff]/100 hover:ease-in hover:duration-500'
+				className='relative flex items-center justify-center h-auto w-full  rounded-xl p-4 group hover:transition-opacity hover:bg-gradient-radial from-[#516ce5]/100 to-[#709dff]/100 hover:ease-in hover:duration-500'
 			>
 				<Image
 					className='rounded-xl group-hover:opacity-10 '

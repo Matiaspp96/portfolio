@@ -10,6 +10,8 @@ import {
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Logo from '../../public/assets/Logo-removebg-preview.png';
 import { useRouter } from 'next/router';
+import DarkModeButton from '../DarkModeButton/DarkModeButton';
+import { useTheme } from 'next-themes';
 
 const NavBar = () => {
 	const [nav, setNav] = useState(false);
@@ -17,6 +19,7 @@ const NavBar = () => {
 	const [navHidden, setNavHidden] = useState(false);
 	const [language, setLanguage] = useState('es');
 	const router = useRouter();
+	const { theme } = useTheme();
 
 	const handleNav = () => {
 		setNav(!nav);
@@ -73,14 +76,43 @@ const NavBar = () => {
 		}
 	}, [scroll]);
 	// hover:bg-gradient-to-bl from-[#f5f6ff] via-[#c5e9f7] to-[#889cf1]
+
+	const navLinks = [
+		{
+			name: 'Home',
+			path: '/',
+			key: 'home',
+		},
+		{
+			name: 'About',
+			path: '/#about',
+			key: 'about',
+		},
+		{
+			name: 'Projects',
+			path: '/#projects',
+			key: 'projects',
+		},
+		{
+			name: 'Skills',
+			path: '/#skills',
+			key: 'skills',
+		},
+		{
+			name: 'Contact',
+			path: '/#contact',
+			key: 'contact',
+		},
+	];
+
 	return (
 		<div
 			as='navbar'
 			ref={navBar}
 			className={
 				navHidden
-					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3] md:overflow-hidden'
-					: `fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] md:overflow-hidden`
+					? 'fixed w-full shadow-xl h-20 z-[100] transform -translate-y-[80px] transition ease-in duration-400 bg-[#ecf0f3] md:overflow-hidden dark:bg-zinc-900 tansition-all duration-700'
+					: `fixed w-full h-20 shadow-xl z-[100] transform translate-y-0 transition ease-in duration-200 bg-[#ecf0f3] md:overflow-hidden dark:bg-zinc-900 tansition-all duration-700'`
 			}
 		>
 			<button
@@ -92,7 +124,10 @@ const NavBar = () => {
 					width: '260px',
 					height: '260px',
 					opacity: 0.6,
-					background: 'radial-gradient(#889cf1, #ecf0f3 80%)',
+					background:
+						theme === 'light'
+							? 'radial-gradient(#889cf1, #ecf0f3 80%)'
+							: 'radial-gradient(#4494e7, #052230 80%)',
 					borderRadius: '50%',
 					boxShadow: 'none',
 					zIndex: -1,
@@ -114,34 +149,17 @@ const NavBar = () => {
 				</div>
 				<div>
 					<ul className='hidden md:flex items-center'>
-						<Link href='/'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
-								Home
-							</li>
-						</Link>
-						<Link href='/#about'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
-								About
-							</li>
-						</Link>
-						<Link href='/#skills'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
-								Skills
-							</li>
-						</Link>
-						<Link href='/#projects'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
-								Projects
-							</li>
-						</Link>
-						<Link href='/#contact'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150'>
-								Contact
-							</li>
-						</Link>
+						{navLinks.map(link => (
+							<Link href={link.path} key={link.key}>
+								<li className='ml-10 text-sm uppercase hover:border-b hover:text-[#516ce5] hover:scale-105 ease-in duration-150 dark:text-gray-100 dark:hover:text-[#8eaae5]'>
+									{link.name}
+								</li>
+							</Link>
+						))}
+						<DarkModeButton />
 						<select
 							onChange={changeLanguage}
-							className='ml-10 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none'
+							className='ml-10 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none dark:bg-gray-100'
 							name='language'
 							id=''
 							value={language}
@@ -168,7 +186,7 @@ const NavBar = () => {
 				<div
 					className={
 						nav
-							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700 z-10'
+							? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700 z-10 dark:bg-zinc-900'
 							: 'fixed left-[-100%] top-0 p-10 ease-in duration-700'
 					}
 				>
@@ -193,47 +211,32 @@ const NavBar = () => {
 							</Link>
 							<div
 								onClick={handleNav}
-								className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+								className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer dark:bg-gray-200'
 							>
 								<AiOutlineClose />
 							</div>
 						</div>
 						<div className='border-b border-gray-300 my-4'>
-							<p className='w-[85%] md:w-[90%] py-4'>
+							<p className='w-[85%] md:w-[90%] py-4 dark:text-stone-300'>
 								Let&apos;s build something
 							</p>
 						</div>
 					</div>
 					<div className='py-4 flex flex-col'>
 						<ul className='uppercase'>
-							<Link href='/'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
-									Home
-								</li>
-							</Link>
-							<Link href='/#about'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
-									About
-								</li>
-							</Link>
-							<Link href='/#skills'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
-									Skills
-								</li>
-							</Link>
-							<Link href='/#projects'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
-									Projects
-								</li>
-							</Link>
-							<Link href='/#contact'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
-									Contact
-								</li>
-							</Link>
+							{navLinks.map(link => (
+								<Link href={link.path} key={link.key}>
+									<li
+										onClick={() => setNav(false)}
+										className='py-4 text-sm dark:text-stone-300'
+									>
+										{link.name}
+									</li>
+								</Link>
+							))}
 							<select
 								onChange={changeLanguage}
-								className='mt-2 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none'
+								className='mt-2 bg-transparent bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none dark:bg-gray-200'
 								name='language'
 								id=''
 							>
@@ -249,7 +252,7 @@ const NavBar = () => {
 								Let&apos;s connect
 							</p>
 							<div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 dark:bg-stone-300 dark:hover:bg-[#516ce5] dark:shadow-gray-600'>
 									<a
 										href='https://www.linkedin.com/in/matias-palomo/'
 										target='_blank'
@@ -258,7 +261,7 @@ const NavBar = () => {
 										<FaLinkedinIn />
 									</a>
 								</div>
-								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 dark:bg-stone-300 dark:hover:bg-[#516ce5] dark:shadow-gray-600'>
 									<a
 										href='https://github.com/Matiaspp96/'
 										target='_blank'
@@ -267,7 +270,7 @@ const NavBar = () => {
 										<FaGithub />
 									</a>
 								</div>
-								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 dark:bg-stone-300 dark:hover:bg-[#516ce5] dark:shadow-gray-600'>
 									<a
 										href='mailto:matiaas.p@gmail.com'
 										target='_blank'
@@ -276,7 +279,7 @@ const NavBar = () => {
 										<AiOutlineMail />
 									</a>
 								</div>
-								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+								<div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 dark:bg-stone-300 dark:hover:bg-[#516ce5] dark:shadow-gray-600'>
 									<a
 										href='https://wa.link/sqc4wz'
 										target='_blank'
