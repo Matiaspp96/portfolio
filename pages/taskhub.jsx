@@ -69,7 +69,7 @@ const taskhub = props => {
 						<p className='py-2 dark:text-stone-300'>{projects.taskhub2}</p>
 						<p className='py-2 dark:text-stone-300'>{projects.taskhub3}</p>
 						<button className='px-8 py-2 mt-4 mr-8 hover:scale-105 ease-in duration-300 dark:shadow-md dark:shadow-zinc-700'>
-							<a href='https://taskhub.online' target='_blank' rel='noreferrer'>
+							<a href='https://taskhubs.online' target='_blank' rel='noreferrer'>
 								Demo
 							</a>
 						</button>
